@@ -241,27 +241,27 @@ export function Tela2() {
             <div className='divNomePlacar'>
               <div>
                 <h2 className='fonts'>Partida</h2>
-                <h2>{numeroPartida}</h2>  
+                <h2 className='contadores'>{numeroPartida}</h2>  
               </div>
               <div>
                 <h2 className='fonts'>Rodada</h2>
-                <h2>{contadorRodadas}</h2>
+                <h2 className='contadores'>{contadorRodadas}</h2>
               </div>              
             </div>
 
             <div className='placar2'>
               <div className='placar3Nomes'>
-                <h3 style={{margin: '0px'}}>{personagem.nome}</h3>
+                <h3 style={{margin: '0px'}} className='nomesPersonagens'>{personagem.nome}</h3>
               </div>
               
               <div className='placar3'>
-                <h1>{MeuEstadoPlacar}</h1>
-                <h1>X</h1>
-                <h1>{MeuPcPlacar}</h1>
+                <h1 className='contadores'>{MeuEstadoPlacar}</h1>
+                <h1 className='contadores'>X</h1>
+                <h1 className='contadores'>{MeuPcPlacar}</h1>
               </div>
               
               <div className='placar3Nomes'>
-                <h3 style={{margin: '0px'}}>{personagemPC.nome}</h3>
+                <h3 style={{margin: '0px'}} className='nomesPersonagens'>{personagemPC.nome}</h3>
               </div>
             </div>
 
@@ -269,7 +269,7 @@ export function Tela2() {
               <h1 className='fonts'>Partida Encerrada!</h1>
               <div style={{display: 'flex'}} className='partidaEncerrada'>
                 <div style={{width: '50%'}} className='partidaEncerrada2'><h2 className='fonts'>Vencedor :</h2></div>
-                <div style={{width: '50%'}} className='partidaEncerrada3'><h2 className='espaco'>{vencedor}</h2></div>
+                <div style={{width: '50%'}} className='partidaEncerrada3'><h2 className='espaco contadores'>{vencedor}</h2></div>
               </div> 
               <Link to='/tela3/'>
                 <button type="button" className="btn btn-info botaoVer">Ver Resultados</button>

@@ -24,19 +24,19 @@ export function Resultados(props) {
             
         <div className='corpoHeader'>
           <div className='div1Header'>
-            <div><h3>{PartidasOficiais[props.indicePartida][0].numeroPartida}</h3></div>
+            <div><h3 className='nomesPersonagens2'>{PartidasOficiais[props.indicePartida][0].numeroPartida}</h3></div>
           </div>
             
           <div className='div2Header'>
             <div className='div2Header2'>
-              <div style={{width: '45%'}}><h4>{PartidasOficiais[props.indicePartida][0].nomeMeuJogador}</h4></div>
+              <div style={{width: '45%'}}><h4 className='nomesPersonagens2'>{PartidasOficiais[props.indicePartida][0].nomeMeuJogador}</h4></div>
               <div style={{width: '10%'}}><h1 className='fonts3'>X</h1></div>
-              <div style={{width: '45%'}}><h4>{PartidasOficiais[props.indicePartida][0].nomePcJogador}</h4></div>
+              <div style={{width: '45%'}}><h4 className='nomesPersonagens2'>{PartidasOficiais[props.indicePartida][0].nomePcJogador}</h4></div>
             </div>
           </div>
 
           <div className='div3Header'>
-            <div> <h3>{infoPartida[props.indicePartida].vencedor}</h3></div>
+            <div> <h3 className='nomesPersonagens2'>{infoPartida[props.indicePartida].vencedor}</h3></div>
           </div>
         </div>
       </div>
@@ -65,9 +65,9 @@ export function Resultados(props) {
             <h2 className='fonts3'>Placar: </h2>
           </div>
           <div className='footerHeader2Placar'>
-            <h2>{infoPartida[props.indicePartida].meuPlacar}</h2>
+            <h2 className='nomesPersonagens2'>{infoPartida[props.indicePartida].meuPlacar}</h2>
             <h2 className='fonts3'>X</h2>
-            <h2>{infoPartida[props.indicePartida].pcPlacar}</h2>
+            <h2 className='nomesPersonagens2'>{infoPartida[props.indicePartida].pcPlacar}</h2>
           </div>
         </div>    
       </div>

@@ -70,3 +70,19 @@
     text-align: center;
     background: rgb(41, 216, 41);
 }
+@media(max-width: 1021px){
+    .fonts3{
+     font-size: 20px;
+    }
+    .nomesPersonagens2{
+     font-size: 20px;
+    }
+ }
+ @media(max-width: 650px){
+     .fonts3{
+         font-size: 15px;
+        }
+        .nomesPersonagens2{
+         font-size: 15px;
+        }
+ }
