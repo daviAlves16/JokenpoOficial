@@ -85,6 +85,12 @@
     height: 100%;
     border: none;
 }
+.removeImg{
+    display: none;
+}
+.adicionaImg{
+    display: flex;
+}
 .divMovimentos{
     width: 96vw;
     border: 3px solid rgb(241, 241, 241) ;
@@ -154,4 +160,12 @@
 .botaoVer{
     font-family: 'Fredoka One', cursive;
     margin-top: 20px;
+}
+.partidaEncerrada{
+    width: 100%;
+}
+.partidaEncerrada2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }

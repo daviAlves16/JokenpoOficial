@@ -30,4 +30,24 @@
     align-items: center;
     flex-wrap: wrap;
     background: var(--button-bg);
+    justify-content: space-evenly;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    border: 1px solid white;
+}
+@media(max-width: 1000px){
+    .abertura{
+        font-size: 20px;
+    }
+    .margimText{
+        font-size: 20px;
+    }
+}
+@media(max-width: 563px){
+    .abertura{
+        font-size: 15px;
+    }
+    .margimText{
+        font-size: 15px;
+    }
 }

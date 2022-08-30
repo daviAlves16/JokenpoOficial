@@ -34,6 +34,7 @@ export function Tela2() {
   const [FimDeJogo1, setFimDeJogo1] = useState('removePlacares');
   const [FimDeJogo2, setFimDeJogo2] = useState('adicionarPlacares');
   const [vencedor, setVencedor] = useState('');
+  const [jogadasMinhaImgs, setJogadasMinhaImgs] = useState('removeImg');
   const [tipoModal, setTipoModal] = useState({tipo: '', tipo2:'', classe: ''});
   var moviments = [{tipo: 'Pedra', img: pedra}, {tipo: 'Papel', img: papel}, {tipo: 'Tesoura', img: tesoura}]
   var resultTest = {tipo: '', img: ''}
@@ -73,6 +74,7 @@ export function Tela2() {
     setPartidasOficiais(prevState => [...prevState, RodadasOficiais]);
   }
  function jogar(){
+  setJogadasMinhaImgs('adicionaImg')
   setResultMinhaJogada({tipo: MinhaJogada.tipo, img: MinhaJogada.img})
   MinhaJogada2 = MinhaJogada.tipo
   minhaJogadaTest.tipo = MinhaJogada.tipo
@@ -188,6 +190,7 @@ export function Tela2() {
   setResultadoFinal({tipo:'', img: interrogacao})
   setContadorRodadas((contadorRodadas) => contadorRodadas + 1)
   setUltimaJogadaPc(RodadasOficiais[RodadasOficiais.length - 1].urlPcJogada)
+  setJogadasMinhaImgs('removeImg')
   if((MeuEstadoPlacar) >= 3){
     fim()
     setVencedor(personagem.nome)
@@ -264,9 +267,9 @@ export function Tela2() {
 
             <div className={FimDeJogo1 + ' fimDeJogo'}>
               <h1 className='fonts'>Partida Encerrada!</h1>
-              <div style={{display: 'flex'}}>
-                <h2 className='fonts'>Vencedor :</h2>
-                <h2 className='espaco'>{vencedor}</h2>
+              <div style={{display: 'flex'}} className='partidaEncerrada'>
+                <div style={{width: '50%'}} className='partidaEncerrada2'><h2 className='fonts'>Vencedor :</h2></div>
+                <div style={{width: '50%'}} className='partidaEncerrada3'><h2 className='espaco'>{vencedor}</h2></div>
               </div> 
               <Link to='/tela3/'>
                 <button type="button" className="btn btn-info botaoVer">Ver Resultados</button>
@@ -276,13 +279,13 @@ export function Tela2() {
 
           <div className={'movimentosDoJogos ' + FimDeJogo2}>
             <div className='jogadas'>
-              <img src={ResultMinhaJogada.img} alt="" className='imgJogadas5'/>
+              <img src={ResultMinhaJogada.img} alt="" className={'imgJogadas5 ' + jogadasMinhaImgs}/>
             </div>
             <div className='jogadas'>
               <img src={ResultadoFinal.img} alt="" className='imgJogadas5'/>
             </div>
             <div className='jogadas'>
-              <img src={ResultPcJogada.img} alt="" className='imgJogadas5'/>
+              <img src={ResultPcJogada.img} alt="" className={'imgJogadas5 ' + jogadasMinhaImgs}/>
             </div>
           </div>
         </div>
